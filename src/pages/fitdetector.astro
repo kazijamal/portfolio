@@ -1,0 +1,118 @@
+---
+import ImageCarousel from "../components/ImageCarousel.astro";
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+---
+
+<ProjectLayout name="FitDetector">
+  <div class="my-6 flex gap-3">
+    <a
+      href="https://fitdetector.vercel.app/"
+      class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
+      >Live Website
+    </a>
+    <a
+      href="https://github.com/kazijamal/fitdetector"
+      class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
+      >GitHub Repository
+    </a>
+  </div>
+
+  <p class="mb-2">
+    FitDetector is a web application to help people find out what clothes their
+    favorite celebrities are wearing using crowdsourced data.
+  </p>
+
+  <p class="mb-6">
+    I developed this web application after noticing how difficult it can be to
+    find out what clothes people are wearing in photos online. Using Google's
+    image search is often inaccurate and gives similar looking clothing but not
+    the exact piece of clothing, while asking on forums related to the celebrity
+    often leads to little to no helpful replies.
+  </p>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Core Features</h2>
+  <ul class="mb-6 list-disc">
+    <li>Submitting an outfit photo for others to leave suggestions on</li>
+    <li>Submitting suggestions for clothing in outfit photos</li>
+    <li>Searching for celebrities to view outfits submitted by others</li>
+    <li>Following celebrities to easily keep up with their outfits</li>
+    <li>Rating outfits and celebrities</li>
+    <li>Authentication with Google OAuth</li>
+  </ul>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Technology Stack</h2>
+  <ul class="mb-6 list-disc">
+    <li>React: Selected because of prior experience</li>
+    <li>
+      Next.js: Selected to learn about concepts like server-side rendering and
+      static site generation
+    </li>
+    <li>
+      TypeScript: Selected for type-checking and better developer experience for
+      catching errors
+    </li>
+    <li>
+      tRPC: Selected for integration with TypeScript and Next.js allowing for a
+      great developer experience building end-to-end typesafe APIs
+    </li>
+    <li>
+      Prisma: Selected because of prior experience and integration with
+      TypeScript
+    </li>
+    <li>
+      MySQL: Selected due to the relational nature of data in my application and
+      to utilize the developer experience of the PlanetScale database platform
+    </li>
+    <li>
+      Tailwind CSS: Selected because of prior experience and quickly developing
+      consistent designs
+    </li>
+  </ul>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Technical Challenges</h2>
+  <p class="mb-6">
+    One major technical challenge I had while setting up my application
+    architecture was how to store user uploaded images. I had never stored user
+    uploaded images in an application before, so I did some research on my
+    options. After looking through options like Supabase's storage, AWS S3,
+    Cloudinary, and BackBlaze B2, I decided on Cloudinary for this project.
+    Cloudinary had an easy-to-use API for uploading and delivering images,
+    options to deliver images through a CDN to improve performance, and offered
+    transformations to manipulate images which could come in handy in the
+    future. They also had a solid free tier for my usage so I gave it a go.
+  </p>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Lessons Learned</h2>
+  <p class="mb-6">
+    My main takeaway from this project is the benefit of typesafety and using
+    TypeScript with other typesafe developer tools. Prior to working on this
+    project, I stayed away from TypeScript due to the learning curve and thought
+    there would be little benefit in its use for my small projects. After
+    countless recommendations from mentors and discussions online, I decided to
+    give it a go. The initial setup and usage of types was a bit daunting and
+    slow, but once I got accustomed to the changes from JavaScript, my
+    development process was much smoother and I was able to catch errors quicker
+    than I would in a JavaScript project. I plan on migrating my past projects
+    to TypeScript, and starting future projects with a typesafe language.
+  </p>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Next Steps</h2>
+  <p class="mb-6">
+    I plan on implementing features like voting and reputation system on
+    clothing suggestions, moderation, and generating statistics from data about
+    celebrities like most their worn brand or average price of clothing. I also
+    want to optimize for performance and find out where I can use server-side
+    rendering or static site generation to improve the user experience on my web
+    application.
+  </p>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-4">Image Gallery</h2>
+  <ImageCarousel
+    images={[
+      {
+        link: "/logo.png",
+        caption: "Test 1",
+      },
+    ]}
+  />
+</ProjectLayout>

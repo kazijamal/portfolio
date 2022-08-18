@@ -1,55 +1,60 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import IndexLayout from "../layouts/IndexLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 ---
 
-<Layout title="Kazi Jamal">
+<IndexLayout title="Kazi Jamal">
 	<main class="max-w-lg mx-auto p-6 w-full">
-		<div class="flex flex-col justify-center items-center my-6">
-			<h1 class="text-6xl font-extrabold text-orange-200 my-6">Kazi Jamal</h1>
-			<p class="text-lg text-center">
+		<div class="flex flex-col justify-center my-6">
+			<h1 class="text-6xl font-extrabold text-orange-200 my-4">Kazi Jamal</h1>
+			<p class="text-lg my-2">
 				I am a third year computer science student at Stony Brook University
 				with an interest in software engineering and web development. When I'm
 				not learning new technologies and developing applications, I'm reading
 				books, playing guitar, or building computers.
 			</p>
+			<div class="flex my-2 gap-6">
+				<a
+					href="/kazijamal_resume.pdf"
+					class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
+					>Resume
+				</a>
+				<a
+					href="https://github.com/kazijamal"
+					class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
+					>GitHub
+				</a>
+				<a
+					href="https://www.linkedin.com/in/kazijamal"
+					class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
+					>LinkedIn
+				</a>
+				<a
+					href="mailto:jamalkazi02@gmail.com"
+					class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
+					>Email
+				</a>
+			</div>
 		</div>
 
 		<div class="flex flex-col justify-center my-6">
-			<h1 class="text-3xl font-bold text-rose-200 my-6">
-				Here are some projects I've worked on
-			</h1>
+			<h1 class="text-3xl font-bold text-rose-200 my-4">Projects</h1>
 
 			<ProjectCard
 				name="FitDetector"
 				description="A web application to help people find out what clothes their favorite celebrities are wearing using crowdsourced data"
+				href="/fitdetector"
 			/>
 			<ProjectCard
 				name="Kazi's Library"
-				description="A web application to track the books I read and display parsed highlights from uploaded Kindle highlights files along with images and metadata fetched from the Google Books API"
+				description="A web application to track the books I read and resurface highlights parsed from a Kindle e-reader"
+				href="/library"
 			/>
 			<ProjectCard
 				name="Solon"
-				description="A mobile application and administrator web application with the purpose of increasing parent engagement and facilitating communication with faculty"
+				description="A mobile application built to increase parent engagement in schools and faciliate communication with faculty"
+				href="/solon"
 			/>
 		</div>
-
-		<div class="flex flex-col justify-center my-6">
-			<p class="text-2xl">
-				Take a look at my
-				<a class="font-semibold text-rose-200 hover:text-rose-300">resume</a>
-				or check out my
-				<a
-					href="https://github.com/kazijamal"
-					class="font-semibold text-rose-200 hover:text-rose-300"
-					>GitHub
-				</a>
-				and <a
-					href="https://www.linkedin.com/in/kazijamal"
-					class="font-semibold text-rose-200 hover:text-rose-300"
-					>LinkedIn
-				</a>
-			</p>
-		</div>
 	</main>
-</Layout>
+</IndexLayout>
