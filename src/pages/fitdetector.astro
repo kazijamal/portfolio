@@ -1,6 +1,6 @@
 ---
-import ImageCarousel from "../components/ImageCarousel.astro";
 import ProjectLayout from "../layouts/ProjectLayout.astro";
+import ImageCarousel from "../components/ImageCarousel.astro";
 ---
 
 <ProjectLayout name="FitDetector">
@@ -27,7 +27,10 @@ import ProjectLayout from "../layouts/ProjectLayout.astro";
     find out what clothes people are wearing in photos online. Using Google's
     image search is often inaccurate and gives similar looking clothing but not
     the exact piece of clothing, while asking on forums related to the celebrity
-    often leads to little to no helpful replies.
+    often leads to little to no helpful replies. Building a platform that
+    attracts users interested in clothing and with expertise or more knowledge
+    about styles that a celebrity often wears would have great potential to
+    solve this problem.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Core Features</h2>
@@ -64,8 +67,8 @@ import ProjectLayout from "../layouts/ProjectLayout.astro";
       to utilize the developer experience of the PlanetScale database platform
     </li>
     <li>
-      Tailwind CSS: Selected because of prior experience and quickly developing
-      consistent designs
+      Tailwind CSS: Selected because of prior experience and for quickly
+      developing consistent designs
     </li>
   </ul>
 
@@ -74,21 +77,22 @@ import ProjectLayout from "../layouts/ProjectLayout.astro";
     One major technical challenge I had while setting up my application
     architecture was how to store user uploaded images. I had never stored user
     uploaded images in an application before, so I did some research on my
-    options. After looking through options like Supabase's storage, AWS S3,
+    options. After looking through services like Supabase's storage, AWS S3,
     Cloudinary, and BackBlaze B2, I decided on Cloudinary for this project.
     Cloudinary had an easy-to-use API for uploading and delivering images,
     options to deliver images through a CDN to improve performance, and offered
     transformations to manipulate images which could come in handy in the
-    future. They also had a solid free tier for my usage so I gave it a go.
+    future. They also had a solid free tier for my usage so I gave it a go, and
+    it seems to be working great so far.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Lessons Learned</h2>
   <p class="mb-6">
-    My main takeaway from this project is the benefit of typesafety and using
-    TypeScript with other typesafe developer tools. Prior to working on this
-    project, I stayed away from TypeScript due to the learning curve and thought
+    My main takeaway from this project is the benefit of using TypeScript with
+    other typesafe developer tools when developing web applications. Prior to
+    working on this project, I stayed away from TypeScript because I thought
     there would be little benefit in its use for my small projects. After
-    countless recommendations from mentors and discussions online, I decided to
+    countless recommendations from reputable discussions online, I decided to
     give it a go. The initial setup and usage of types was a bit daunting and
     slow, but once I got accustomed to the changes from JavaScript, my
     development process was much smoother and I was able to catch errors quicker
@@ -98,12 +102,12 @@ import ProjectLayout from "../layouts/ProjectLayout.astro";
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Next Steps</h2>
   <p class="mb-6">
-    I plan on implementing features like voting and reputation system on
-    clothing suggestions, moderation, and generating statistics from data about
-    celebrities like most their worn brand or average price of clothing. I also
-    want to optimize for performance and find out where I can use server-side
-    rendering or static site generation to improve the user experience on my web
-    application.
+    I plan on implementing features like a voting and reputation system on
+    clothing suggestions, content moderation, and generating statistics from
+    data about celebrities like most their worn brand or average price of
+    clothing. I also want to optimize for performance and decide where in my web
+    application I can use server-side rendering or static site generation to
+    improve the user experience.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-4">Image Gallery</h2>
