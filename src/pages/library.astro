@@ -1,0 +1,146 @@
+---
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+import ImageCarousel from "../components/ImageCarousel.astro";
+---
+
+<ProjectLayout name="Kazi's Library">
+  <div class="my-6 flex gap-3">
+    <a
+      href="https://kazis-library.herokuapp.com/"
+      class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
+      >Visit Website
+    </a>
+    <a
+      href="https://github.com/kazijamal/library"
+      class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
+      >View Code
+    </a>
+  </div>
+
+  <p class="mb-2">
+    A web application to track the books I read and resurface highlights parsed
+    from Kindle e-reader.
+  </p>
+
+  <p class="mb-6">
+    I developed this application when I started reading a lot of non-fiction
+    books and noticed it was hard to retain information in my memory.
+    Highlighting important pieces of the text on my Kindle e-reader was helpful,
+    but revisiting them on the slow Kindle was a chore and resurfacing old
+    highlights was the missing piece of the equation to retention. One solution
+    to this problem was <a
+      href="https://readwise.io/"
+      class="text-rose-200 hover:text-rose-300"
+      >Readwise
+    </a> but this was a paid service not exactly tailored for my needs, so I decided
+    to make a web application on my own.
+  </p>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Core Features</h2>
+  <ul class="mb-6 list-disc">
+    <li>
+      Adding books I am reading or have finished reading with images and
+      metadata automatically retrieved from the Google Books API
+    </li>
+    <li>
+      Adding highlights to books by parsing an uploaded Kindle e-reader
+      highlights file
+    </li>
+    <li>Viewing books I am reading or have finished reading</li>
+    <li>Viewing highlights from books I have finished reading</li>
+    <li>Viewing some random highlights selected from all highlights</li>
+    <li>Authentication to upload data</li>
+  </ul>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Technology Stack</h2>
+  <ul class="mb-6 list-disc">
+    <li>
+      React: Selected to gain experience on my first major project working with
+      React
+    </li>
+    <li>
+      Node.js and Express.js: Selected to create a REST API for my backend in
+      JavaScript, the same language as my frontend
+    </li>
+    <li>
+      Prisma: Selected to try a new ORM for interacting with a SQL database
+      instead of Sequelize which I had worked with previously
+    </li>
+    <li>
+      PostgreSQL: Selected due to the relational nature of data in my
+      application and prior experience
+    </li>
+    <li>Tailwind CSS: Selected to quickly develop consistent designs</li>
+  </ul>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Technical Challenges</h2>
+  <p class="mb-2">
+    One technical challenge I experienced was handling the Kindle highlights
+    files. I had never worked with file uploading in a web application before so
+    I had to learn about using a form in React to send multipart form data to my
+    Node.js and Express.js REST API. Then I had to create a parser to read the
+    Kindle highlights HTML file and find the necessary fields to be exported
+    into a JSON, which would then be inserted as records into my PostgreSQL
+    database.
+  </p>
+
+  <p class="mb-6">
+    This was also my first major project working with React or a frontend
+    JavaScript framework in general, so I had to spend a lot of time learning
+    the fundamentals of the library and reading example code to develop the web
+    application. I also noticed areas where my code seemed inefficient and could
+    improve, which mainly seemed to revolve around data fetching, so I noted
+    this as something to research in the future.
+  </p>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Lessons Learned</h2>
+  <p class="mb-6">
+    My main takeaway from this project is how a frontend framework like React
+    could greatly improve the developer experience of building user interfaces,
+    while also improving the user experience. I learned about the benefits of
+    creating encapsulated components with their own state to break up complex
+    UIs and create code which is organized well and can be maintained well into
+    the future. I also learned about areas where React could benefit from
+    additonal tooling for things like such as data fetching with a library like
+    React Query or a framework with more opinionated data fetching methods like
+    Next.js.
+  </p>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-2">Next Steps</h2>
+  <p class="mb-6">
+    Most of the significant features of this web application have already been
+    implemented, so in the future I want to prioritize code quality and user
+    experience. I plan on doing this by using React Query for data fetching and
+    mutations instead of using the useEffect and useState hooks, or using
+    Next.js for server-side rendering of certain pages to improve the user
+    experience and performance. As a more major update, I may implement some
+    social functionality into the web application, with users being able to like
+    other users' highlights and share to other social medias.
+  </p>
+
+  <h2 class="text-3xl font-bold text-rose-200 mb-4">Images</h2>
+  <ImageCarousel
+    images={[
+      {
+        link: "/images/library/image-1.png",
+        caption: "Home Page",
+      },
+      {
+        link: "/images/library/image-2.png",
+        caption: "Home Page",
+      },
+      {
+        link: "/images/library/image-3.png",
+        caption: "Book Highlights Page",
+      },
+      {
+        link: "/images/library/image-4.png",
+        caption: "Add Book Form",
+      },
+      {
+        link: "/images/library/image-5.png",
+        caption: "Add Highlights Form",
+      },
+    ]}
+  />
+</ProjectLayout>
