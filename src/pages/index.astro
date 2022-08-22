@@ -1,46 +1,17 @@
 ---
-import IndexLayout from "../layouts/IndexLayout.astro";
+import Layout from "../layouts/Layout.astro";
+import AboutMe from "../components/AboutMe.astro";
+import LinkSection from "../components/LinkSection.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 ---
 
-<IndexLayout title="Kazi Jamal">
+<Layout title="Kazi Jamal">
 	<main class="max-w-lg mx-auto p-6 w-full">
 		<div class="flex flex-col justify-center my-6">
 			<h1 class="text-6xl font-extrabold text-orange-200 my-4">Kazi Jamal</h1>
-			<p class="text-lg my-2">
-				I am a third year computer science student at Stony Brook University
-				with an interest in software engineering and web development. I've done
-				a software engineering internship at <a
-					href="https://gesture.vip"
-					class="text-lg text-rose-200 hover:text-rose-300"
-					>Gesture
-				</a> in the Summer of 2022 and am working as a web developer at Stony Brook
-				University's Department of Computer Science. When I'm not learning new technologies
-				and developing applications, I'm reading books, playing guitar, or building
-				computers.
-			</p>
-			<div class="flex my-2 gap-6">
-				<a
-					href="/kazijamal_resume.pdf"
-					class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
-					>Resume
-				</a>
-				<a
-					href="https://github.com/kazijamal"
-					class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
-					>GitHub
-				</a>
-				<a
-					href="https://www.linkedin.com/in/kazijamal"
-					class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
-					>LinkedIn
-				</a>
-				<a
-					href="mailto:jamalkazi02@gmail.com"
-					class="text-lg font-semibold text-rose-200 hover:text-rose-300 underline underline-offset-4"
-					>Email
-				</a>
-			</div>
+
+			<AboutMe />
+			<LinkSection />
 		</div>
 
 		<div class="flex flex-col justify-center my-6">
@@ -63,4 +34,4 @@ import ProjectCard from "../components/ProjectCard.astro";
 			/>
 		</div>
 	</main>
-</IndexLayout>
+</Layout>

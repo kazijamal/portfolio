@@ -13,7 +13,7 @@ const { images } = Astro.props as Props;
   {
     images.map((image) => (
       <div class="slide relative border border-rose-200 rounded-lg">
-        <img class="w-full h-full" src={image.link} />
+        <img class="w-full h-full min-h-[400px] object-cover" src={image.link} />
         <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">
           {image.caption}
         </div>
@@ -70,21 +70,17 @@ const { images } = Astro.props as Props;
       slideIndex = slides.length;
     }
 
-    // hide all slides
     for (i = 0; i < slides.length; i++) {
       slides[i].classList.add("hidden");
     }
 
-    // remove active status from all dots
     for (i = 0; i < dots.length; i++) {
       dots[i].classList.remove("bg-rose-300");
       dots[i].classList.add("bg-rose-50");
     }
 
-    // show the active slide
     slides[slideIndex - 1].classList.remove("hidden");
 
-    // highlight the active dot
     dots[slideIndex - 1].classList.remove("bg-rose-50");
     dots[slideIndex - 1].classList.add("bg-rose-300");
   }
