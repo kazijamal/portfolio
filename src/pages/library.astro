@@ -18,22 +18,20 @@ import ImageCarousel from "../components/ImageCarousel.astro";
   </div>
 
   <p class="mb-2">
-    Kazi's Library is a web application to track the books I read and resurface highlights parsed
-    from Kindle e-reader.
+    Kazi's Library is a web application to track the books I read and resurface
+    highlights parsed from a Kindle e-reader.
   </p>
 
   <p class="mb-6">
     I developed this application when I started reading a lot of non-fiction
-    books and noticed it was hard to retain information in my memory.
+    books and noticed it was hard to retain the information in my memory.
     Highlighting important pieces of the text on my Kindle e-reader was helpful,
-    but revisiting them on the slow Kindle was a chore and resurfacing old
-    highlights was the missing piece of the equation to retention. One solution
-    to this problem was <a
-      href="https://readwise.io/"
-      class="text-rose-200 hover:text-rose-300"
+    but revisiting them on the slow device was a chore and resurfacing old
+    highlights a tedious manual process. One available solution to this problem
+    was <a href="https://readwise.io/" class="text-rose-200 hover:text-rose-300"
       >Readwise
-    </a> but this was a paid service not exactly tailored for my needs, so I decided
-    to make a web application on my own.
+    </a> but this was a paid service not exactly tailored to my needs, so I decided
+    to develop a web application on my own.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Core Features</h2>
@@ -55,12 +53,12 @@ import ImageCarousel from "../components/ImageCarousel.astro";
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Technology Stack</h2>
   <ul class="mb-6 list-disc">
     <li>
-      React: Selected to gain experience on my first major project working with
-      React
+      React: Selected to gain experience with a popular frontend JavaScript
+      framework
     </li>
     <li>
       Node.js and Express.js: Selected to create a REST API for my backend in
-      JavaScript, the same language as my frontend
+      the same language as my frontend
     </li>
     <li>
       Prisma: Selected to try a new ORM for interacting with a SQL database
@@ -75,22 +73,23 @@ import ImageCarousel from "../components/ImageCarousel.astro";
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Technical Challenges</h2>
   <p class="mb-2">
-    One technical challenge I experienced was handling the Kindle highlights
-    files. I had never worked with file uploading in a web application before so
-    I had to learn about using a form in React to send multipart form data to my
-    Node.js and Express.js REST API. Then I had to create a parser to read the
-    Kindle highlights HTML file and find the necessary fields to be exported
-    into a JSON, which would then be inserted as records into my PostgreSQL
-    database.
+    One technical challenge I experienced was adding highlights from the Kindle
+    highlights files. I had never worked with file uploading in a web
+    application before so I had to learn about using a form in React to send
+    multipart form data to my Node.js and Express.js REST API. Then I had to
+    create a parser to read the Kindle highlights HTML file and identify the
+    necessary fields to be exported into a JSON, which would then be inserted as
+    records into my PostgreSQL database.
   </p>
 
   <p class="mb-6">
     This was also my first major project working with React or a frontend
     JavaScript framework in general, so I had to spend a lot of time learning
     the fundamentals of the library and reading example code to develop the web
-    application. I also noticed areas where my code seemed inefficient and could
-    improve, which mainly seemed to revolve around data fetching, so I noted
-    this as something to research in the future.
+    application. There were many areas I noticed where my code seemed
+    inefficient and could improve, which mainly seemed to revolve around data
+    fetching, so I noted this as something to research in the future as I gained
+    proficiency in working with React.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Lessons Learned</h2>
@@ -99,11 +98,11 @@ import ImageCarousel from "../components/ImageCarousel.astro";
     could greatly improve the developer experience of building user interfaces,
     while also improving the user experience. I learned about the benefits of
     creating encapsulated components with their own state to break up complex
-    UIs and create code which is organized well and can be maintained well into
-    the future. I also learned about areas where React could benefit from
-    additonal tooling for things like such as data fetching with a library like
-    React Query or a framework with more opinionated data fetching methods like
-    Next.js.
+    UIs and create code which is organized well and can be maintained far into
+    the future. I also learned about areas where an application built with React
+    could benefit from additional tooling for things such as data fetching with
+    a library like React Query or a framework with more opinionated data
+    fetching methods like Next.js.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Next Steps</h2>
@@ -115,7 +114,7 @@ import ImageCarousel from "../components/ImageCarousel.astro";
     Next.js for server-side rendering of certain pages to improve the user
     experience and performance. As a more major update, I may implement some
     social functionality into the web application, with users being able to like
-    other users' highlights and share to other social medias.
+    other users' highlights and share them to other social media platforms.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-4">Images</h2>
