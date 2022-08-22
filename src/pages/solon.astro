@@ -1,6 +1,5 @@
 ---
 import ProjectLayout from "../layouts/ProjectLayout.astro";
-import ImageCarousel from "../components/ImageCarousel.astro";
 ---
 
 <ProjectLayout name="Solon">
@@ -18,83 +17,102 @@ import ImageCarousel from "../components/ImageCarousel.astro";
   </div>
 
   <p class="mb-2">
-    Solon is a mobile application built to increase parent engagement in schools and facilitate communication wtih faculty.
+    Solon is a mobile application built to increase parent engagement in schools
+    and facilitate communication with faculty.
   </p>
 
   <p class="mb-6">
-    I developed this web application after noticing how difficult it can be to
-    find out what clothes people are wearing in photos online. Using Google's
-    image search is often inaccurate and gives similar looking clothing but not
-    the exact piece of clothing, while asking on forums related to the celebrity
-    often leads to little to no helpful replies. Building a platform that
-    attracts users interested in clothing and with expertise or more knowledge
-    about styles that a celebrity often wears would have great potential to
-    solve this problem.
+    I developed this mobile application with mentors from Google and a team of
+    three students as a participant in a Google Mentorship Program. At a high
+    school with a very large immigrant population, we noticed a lot of parents
+    were unable to paricipate in a parent-teacher organization, which would be
+    largely beneficial to the students' success. The two main reasons for this
+    was a language barrier and too many other commitments to add on length
+    school meetings. Our team set out to solve this by creating a mobile
+    application for quick and efficient parent engagement in schools with
+    seamless translations to remove the language barrier. I mainly developed the
+    REST API and administrator web application, while my two teammates worked on
+    the mobile application.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Core Features</h2>
   <ul class="mb-6 list-disc">
-    <li>Submitting an outfit photo for others to leave suggestions on</li>
-    <li>Submitting suggestions for clothing in outfit photos</li>
-    <li>Searching for celebrities to view outfits submitted by others</li>
-    <li>Following celebrities to easily keep up with their outfits</li>
-    <li>Rating outfits and celebrities</li>
-    <li>Authentication with Google OAuth</li>
+    <li>
+      Voting on proposals created by faculty to create change in school policty
+    </li>
+    <li>Viewing school events and marking attendance to notify faculty</li>
+    <li>
+      Creating and commenting forum posts for discussion regarding the school
+    </li>
+    <li>
+      Viewing all content in the app in one of the most commonly used languages
+      in the school by changing your system language using the Google Translate
+      API
+    </li>
+    <li>
+      Administrator web application for faculty to add and moderate proposals,
+      events, and forum posts
+    </li>
+    <li>Authentication for authorized parent emails</li>
   </ul>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Technology Stack</h2>
   <ul class="mb-6 list-disc">
-    <li>Flutter: Selected</li>
-    <li>Node.js and Express.js: Selected</li>
-    <li>Sequelize: Selected</li>
-    <li>PostgreSQL: Selected</li>
+    <li>
+      Flutter: Selected to create a cross platform mobile application quickly,
+      and because we had access to mentors from the Flutter team
+    </li>
+    <li>
+      Node.js and Express.js: Selected to create a REST API that could be
+      utilized by the mobile application and administrator web application
+    </li>
+    <li>Sequelize: Selected for easier interaction with our SQL database</li>
+    <li>
+      PostgreSQL: Selected due to the relational nature of data in our
+      application
+    </li>
   </ul>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Technical Challenges</h2>
   <p class="mb-6">
-    One major technical challenge I had while setting up my application
-    architecture was how to store user uploaded images. I had never stored user
-    uploaded images in an application before, so I did some research on my
-    options. After looking through services like Supabase's storage, AWS S3,
-    Cloudinary, and BackBlaze B2, I decided on Cloudinary for this project.
-    Cloudinary had an easy-to-use API for uploading and delivering images,
-    options to deliver images through a CDN to improve performance, and offered
-    transformations to manipulate images which could come in handy in the
-    future. They also had a solid free tier for my usage so I gave it a go, and
-    it seems to be working great so far.
+    This was the first piece of software that any one on our team had ever
+    created, so we had a lot of missteps at the start of our journey. Most of
+    this revolved around planning and project management. As we were excited to
+    immerse ourselves into coding our pieces of the project, we skipped ahead of
+    a lot of the planning needed to get our features working. One example of
+    this was regarding translations, one of the most important functionalities
+    of our application. We had not planned our data model around translations
+    and searching content with these translated pieces of text, so when we got
+    around to implementing these functionalities, major changes had to be made
+    across the entire application. Working with databases and creating a
+    properly designed database for our use case was quite difficult, and a lot
+    of the help from our mentors were on this topic.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Lessons Learned</h2>
   <p class="mb-6">
-    My main takeaway from this project is the benefit of using TypeScript with
-    other typesafe developer tools when developing web applications. Prior to
-    working on this project, I stayed away from TypeScript because I thought
-    there would be little benefit in its use for my small projects. After
-    countless recommendations from reputable discussions online, I decided to
-    give it a go. The initial setup and usage of types was a bit daunting and
-    slow, but once I got accustomed to the changes from JavaScript, my
-    development process was much smoother and I was able to catch errors quicker
-    than I would in a JavaScript project. I plan on migrating my past projects
-    to TypeScript, and starting future projects with a typesafe language.
+    I learned a lot about making a REST API using Node.js and Express to be
+    consumed by both a mobile and web application. I also learned about
+    authentication methods for communicating with our backend, and database
+    design. However, the most important takeaway was regarding planning and
+    project management. We did not understand the importance of proper planning
+    until more than halfway through the project, at which point we were able to
+    drastically improve our efficiency. We started spending hours whiteboarding
+    and writing design documents, but spending significantly less time having to
+    go back and fix mistakes or repeatedly communicating on the same issues. We
+    also learned about presenting your product to your audience, in our case the
+    school faculty, and persuading them to get on board with your vision.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Next Steps</h2>
   <p class="mb-6">
-    I plan on implementing features like a voting and reputation system on
-    clothing suggestions, content moderation, and generating statistics from
-    data about celebrities like most their worn brand or average price of
-    clothing. I also want to optimize for performance and decide where in my web
-    application I can use server-side rendering or static site generation to
-    improve the user experience.
+    We completed the MVP of our application at the height of the COVID-19
+    pandemic in 2020. Although we were already in talks with the school
+    administration to get our solution implemented and used by the parents at
+    our school, they had to reprioritize their time and focus on the effects of
+    the pandemic. By the time they got back on their feet and adjusted to
+    pandemic life, we had graduated, and unfortunately the project ended there.
+    We do not plan on continuing this project, but learned so much that we took
+    with us onto future endeavours.
   </p>
-
-  <h2 class="text-3xl font-bold text-rose-200 mb-4">Images</h2>
-  <ImageCarousel
-    images={[
-      {
-        link: "/logo.png",
-        caption: "Test 1",
-      },
-    ]}
-  />
 </ProjectLayout>
