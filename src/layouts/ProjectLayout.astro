@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	name: string;
+  name: string;
 }
 
 const { name } = Astro.props as Props;
@@ -8,21 +8,21 @@ const { name } = Astro.props as Props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>{name} - Kazi Jamal</title>
-		<meta
-			name="description"
-			content="Kazi Jamal is a third year computer science student at Stony Brook University with an interest in software engineering and web development."
-		/>
-	</head>
-	<body class="bg-neutral-900 text-neutral-100 max-w-3xl mx-auto p-8 w-full">
-		<a href="/" class="underline underline-offset-4">← Back Home</a>
-		<main>
-			<h1 class="text-5xl font-extrabold text-orange-200 my-6">{name}</h1>
-			<slot />
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{name} - Kazi Jamal</title>
+    <meta
+      name="description"
+      content="Kazi Jamal is a third year computer science student at Stony Brook University with an interest in software engineering and full stack development."
+    />
+  </head>
+  <body class="bg-neutral-900 text-neutral-100 max-w-3xl mx-auto p-8 w-full">
+    <a href="/" class="underline underline-offset-4">← Back Home</a>
+    <main>
+      <h1 class="text-5xl font-extrabold text-orange-200 my-6">{name}</h1>
+      <slot />
+    </main>
+  </body>
 </html>
