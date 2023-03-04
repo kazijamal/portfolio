@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props as Props;
@@ -8,17 +8,23 @@ const { title } = Astro.props as Props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>{title}</title>
-		<meta
-			name="description"
-			content="Kazi Jamal is a third year computer science student at Stony Brook University with an interest in software engineering and web development."
-		/>
-	</head>
-	<body class="bg-neutral-900 text-neutral-100">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Kazi Jamal is a third year computer science student at Stony Brook University with an interest in software engineering and web development."
+    />
+    <script
+      async
+      defer
+      data-website-id="75e5fea3-2b59-4e43-9da6-dd055b83c227"
+      src="https://umami-production-bb93.up.railway.app/umami.js"
+    ></script>
+  </head>
+  <body class="bg-neutral-900 text-neutral-100">
+    <slot />
+  </body>
 </html>
