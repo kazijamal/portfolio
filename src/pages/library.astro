@@ -1,6 +1,5 @@
 ---
 import ProjectLayout from "../layouts/ProjectLayout.astro";
-import ImageCarousel from "../components/ImageCarousel.astro";
 ---
 
 <ProjectLayout name="Kazi's Library">
@@ -30,8 +29,8 @@ import ImageCarousel from "../components/ImageCarousel.astro";
     highlights a tedious manual process. One available solution to this problem
     was <a href="https://readwise.io/" class="text-rose-200 hover:text-rose-300"
       >Readwise
-    </a> but this was a paid service not exactly tailored to my needs, so I decided
-    to develop a web application on my own.
+    </a> but this was a paid service not exactly tailored to my needs, so I
+    decided to develop a web application on my own.
   </p>
 
   <h2 class="text-3xl font-bold text-rose-200 mb-2">Core Features</h2>
@@ -116,30 +115,4 @@ import ImageCarousel from "../components/ImageCarousel.astro";
     social functionality into the web application, with users being able to like
     other users' highlights and share them to other social media platforms.
   </p>
-
-  <h2 class="text-3xl font-bold text-rose-200 mb-4">Images</h2>
-  <ImageCarousel
-    images={[
-      {
-        link: "/images/library/image-1.png",
-        caption: "Home Page",
-      },
-      {
-        link: "/images/library/image-2.png",
-        caption: "Home Page",
-      },
-      {
-        link: "/images/library/image-3.png",
-        caption: "Book Highlights Page",
-      },
-      {
-        link: "/images/library/image-4.png",
-        caption: "Add Book Form",
-      },
-      {
-        link: "/images/library/image-5.png",
-        caption: "Add Highlights Form",
-      },
-    ]}
-  />
 </ProjectLayout>

@@ -1,4 +1,6 @@
 ---
+import CommonHead from "./CommonHead.astro";
+
 export interface Props {
   title: string;
 }
@@ -6,23 +8,10 @@ export interface Props {
 const { title } = Astro.props as Props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <title>{title}</title>
-    <meta
-      name="description"
-      content="Kazi Jamal is a third year computer science student at Stony Brook University with an interest in software engineering and web development."
-    />
-    <script
-      async
-      src="https://umami-production-53f3.up.railway.app/script.js"
-      data-website-id="9902b776-633d-468f-ac73-6bbcb698a436"
-    ></script>
-  </head>
+  <meta charset="UTF-8" />
+  <CommonHead title={title} />
   <body class="bg-neutral-900 text-neutral-100">
     <slot />
   </body>

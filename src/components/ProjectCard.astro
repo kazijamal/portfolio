@@ -1,22 +1,22 @@
 ---
 export interface Props {
-	name: string;
-	description: string;
-	href: string;
+  name: string;
+  description: string;
+  href: string;
 }
 
 const { name, description, href } = Astro.props as Props;
 ---
 
 <div
-	class="hover:bg-neutral-800 p-4 my-4 border-2 border-rose-200 rounded-lg hover:scale-105 transition-all"
+  class="hover:bg-neutral-800 p-4 my-4 border-2 border-rose-200 rounded-lg hover:scale-105 transition-all"
 >
-	<a href={href}>
-		<h2 class="text-xl font-bold mb-2">
-			{name}
-		</h2>
-		<p>
-			{description}
-		</p>
-	</a>
+  <a href={href}>
+    <h2 class="text-xl font-bold mb-2" transition:name={`title-${name}`}>
+      {name}
+    </h2>
+    <p>
+      {description}
+    </p>
+  </a>
 </div>

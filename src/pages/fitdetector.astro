@@ -1,6 +1,5 @@
 ---
 import ProjectLayout from '../layouts/ProjectLayout.astro';
-import ImageCarousel from '../components/ImageCarousel.astro';
 ---
 
 <ProjectLayout name='FitDetector'>
@@ -111,38 +110,4 @@ import ImageCarousel from '../components/ImageCarousel.astro';
         web application I can use server-side rendering or static site
         generation to improve the user experience.
     </p>
-
-    <h2 class='text-3xl font-bold text-rose-200 mb-4'>Images</h2>
-    <ImageCarousel
-        images={[
-            {
-                link: '/images/fitdetector/image-1.png',
-                caption: 'Home Page',
-            },
-            {
-                link: '/images/fitdetector/image-2.png',
-                caption: 'Celebrity Search',
-            },
-            {
-                link: '/images/fitdetector/image-3.png',
-                caption: 'Outfit Submission',
-            },
-            {
-                link: '/images/fitdetector/image-4.png',
-                caption: 'Outfit Page',
-            },
-            {
-                link: '/images/fitdetector/image-5.png',
-                caption: 'Outfit Page',
-            },
-            {
-                link: '/images/fitdetector/image-6.png',
-                caption: 'Clothing Submission',
-            },
-            {
-                link: '/images/fitdetector/image-7.png',
-                caption: 'Celebrity Page',
-            },
-        ]}
-    />
 </ProjectLayout>

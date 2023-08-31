@@ -1,0 +1,25 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title>{title}</title>
+  <meta
+    name="description"
+    content="Kazi Jamal is a fourth year computer science student at Stony Brook University graduating in December 2023 with an interest in software engineering and web development."
+  />
+  <script
+    async
+    src="https://umami-production-53f3.up.railway.app/script.js"
+    data-website-id="9902b776-633d-468f-ac73-6bbcb698a436"></script>
+  <ViewTransitions />
+</head>
