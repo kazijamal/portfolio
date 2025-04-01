@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -18,5 +18,5 @@ const { title } = Astro.props as Props;
     content="Kazi Jamal graduated from Stony Brook University with a Bachelor of Science in Computer Science in December 2023 and is currently looking for full-time software engineering opportunities"
   />
   <script async src="https://us.umami.is/script.js" data-website-id="890dbd69-4b05-46e0-85db-4f044c8d1992"></script>
-  <ViewTransitions />
+  <ClientRouter />
 </head>
